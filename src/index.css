@@ -6,14 +6,112 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Nunito', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #0e4f7a;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.titulo {
+  font-family: 'Fredoka', 'Nunito', system-ui, sans-serif;
+}
+
+.bg-agua {
+  background: linear-gradient(180deg, #5ee0ef 0%, #22a6d6 30%, #1673b8 65%, #1e3a8a 100%);
+}
+
+/* Burbujas del fondo */
+.burbuja {
+  position: absolute;
+  bottom: -40px;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.15) 60%);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  animation-name: subir;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes subir {
+  0% { transform: translate(0, 0); opacity: 0; }
+  10% { opacity: 0.8; }
+  50% { transform: translate(14px, -55vh); }
+  100% { transform: translate(-6px, -110vh); opacity: 0; }
+}
+
+/* Ajolote */
+.nadando {
+  animation: nadar 3s ease-in-out infinite;
+}
+
+@keyframes nadar {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-8px) rotate(2deg); }
+}
+
+.branquias-izq,
+.branquias-der {
+  transform-box: fill-box;
+  animation: branquias 1.6s ease-in-out infinite;
+}
+
+.branquias-izq { transform-origin: right center; }
+.branquias-der { transform-origin: left center; animation-delay: 0.2s; }
+
+@keyframes branquias {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-6deg); }
+}
+
+.branquias-der { animation-name: branquias-der; }
+
+@keyframes branquias-der {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(6deg); }
+}
+
+.rebote {
+  animation: rebote 0.25s ease-out;
+}
+
+@keyframes rebote {
+  0% { transform: scale(1); }
+  40% { transform: scale(0.92); }
+  100% { transform: scale(1); }
+}
+
+/* Numeros que salen al hacer clic */
+.numero-flotante {
+  transform: translate(-50%, -50%);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+  animation: flotar 0.9s ease-out forwards;
+}
+
+@keyframes flotar {
+  0% { opacity: 1; transform: translate(-50%, -50%); }
+  100% { opacity: 0; transform: translate(-50%, -140px); }
+}
+
+/* Rodillos de la tragamonedas */
+.girando {
+  animation: girar 0.16s linear infinite;
+}
+
+@keyframes girar {
+  0% { transform: translateY(-3px); filter: blur(0.5px); }
+  50% { transform: translateY(3px); filter: blur(1.5px); }
+  100% { transform: translateY(-3px); filter: blur(0.5px); }
+}
+
+.toast {
+  animation: entrar 0.35s cubic-bezier(0.2, 1.4, 0.4, 1);
+}
+
+@keyframes entrar {
+  0% { opacity: 0; transform: translateY(20px) scale(0.95); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .burbuja, .nadando, .branquias-izq, .branquias-der, .girando { animation: none; }
 }

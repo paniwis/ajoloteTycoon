@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+<p align="center">
+  <img src="public/logo192.png" width="110" alt="Ajolote Tycoon" />
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">Ajolote Tycoon</h1>
 
-## Available Scripts
+<p align="center">
+  Juego clicker de ajolotes hecho con React y Tailwind CSS.<br />
+  Junta huevos, construye acuarios, compra mejoras y prueba suerte en la tragamonedas.
+</p>
 
-In the project directory, you can run:
+<p align="center">
+  <a href="https://paniwis.github.io/ajoloteTycoon"><b>🎮 Jugar ahora</b></a>
+</p>
 
-### `npm start`
+## ✨ Características
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Ajolote ilustrado en SVG** con animaciones de nado y branquias.
+- **8 edificios** de producción automática, con compra de x1, x10 o el máximo posible.
+- **Mejoras** de clic, por edificio y globales que se desbloquean conforme avanzas.
+- **Tragamonedas** con rodillos que se detienen uno por uno; la apuesta escala con tu producción.
+- **15 logros**, cada uno aumenta tu producción un 2%.
+- **Guardado automático** en el navegador y ganancias mientras no estás (hasta 8 horas).
+- Diseño **responsive** para computadora y celular.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tecnologías
 
-### `npm test`
+React 19 · Tailwind CSS 3 · Lucide Icons · GitHub Actions · GitHub Pages
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Ejecutarlo en tu computadora
 
-### `npm run build`
+```bash
+npm install
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Se abre en `http://localhost:3000`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📦 Publicación
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Cada push a `main` compila el proyecto y lo publica en GitHub Pages con el flujo `.github/workflows/pages.yml`.
 
-### `npm run eject`
+## 📁 Estructura
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+src/
+├── App.js              # Interfaz: clicker, tienda, tragamonedas y logros
+├── juego.js            # Lógica: reducer, cálculos, guardado y formato de números
+├── data.js             # Edificios, mejoras, logros y símbolos
+└── components/
+    └── Ajolote.js      # Ilustración SVG del ajolote
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Hecho por [Evelyn Larraga](https://github.com/paniwis)
