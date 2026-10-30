@@ -13,6 +13,10 @@
   <a href="https://paniwis.github.io/ajoloteTycoon"><b>🎮 Jugar ahora</b></a>
 </p>
 
+<p align="center">
+  <a href="https://ko-fi.com/paniwis"><img src="https://img.shields.io/badge/Invítame%20un%20café-Ko--fi-FF6433?style=for-the-badge&logo=kofi&logoColor=white" alt="Invítame un café en Ko-fi" /></a>
+</p>
+
 ## ✨ Características
 
 - **Ajolote ilustrado en SVG** con animaciones de nado y branquias.
@@ -50,6 +54,10 @@ src/
 └── components/
     └── Ajolote.js      # Ilustración SVG del ajolote
 ```
+
+## ☕ Apoya el proyecto
+
+Si te gustó Ajolote Tycoon, puedes invitarme un café en [Ko-fi](https://ko-fi.com/paniwis). ¡Me ayuda a seguir creando juegos y proyectos!
 
 ---
 

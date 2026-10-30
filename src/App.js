@@ -1,6 +1,7 @@
 import React, { useEffect, useReducer, useRef, useState } from 'react';
 import { Egg, Timer, MousePointerClick, Trophy, Store, Dices, RotateCcw } from 'lucide-react';
 import Ajolote from './components/Ajolote';
+import BotonKofi from './components/BotonKofi';
 import { EDIFICIOS, MEJORAS, LOGROS, SIMBOLOS, PREMIO_PAR, NIVELES_APUESTA, BONO_POR_LOGRO } from './data';
 import {
   reducer, cargarPartida, guardarPartida, porSegundo, porClick, produccionEdificio,
@@ -48,9 +49,12 @@ export default function App() {
       <Burbujas />
 
       <header className="relative z-10 max-w-7xl mx-auto px-4 pt-5 pb-3">
-        <div className="flex items-center justify-center gap-3 mb-4">
+        <div className="relative flex items-center justify-center gap-3 mb-4">
           <Ajolote className="w-12 h-12 drop-shadow" />
           <h1 className="titulo text-3xl sm:text-4xl font-bold text-white drop-shadow-md">Ajolote Tycoon</h1>
+          <div className="hidden md:block absolute right-0">
+            <BotonKofi />
+          </div>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           <Stat icono={<Egg />} valor={formato(s.huevos)} etiqueta="Huevos" color="text-pink-600" />
@@ -77,8 +81,14 @@ export default function App() {
         </section>
       </main>
 
-      <footer className="relative z-10 text-center text-white/80 text-sm pb-6">
-        Hecho por <a className="underline hover:text-white" href="https://github.com/paniwis">Evelyn Larraga</a> · Tu progreso se guarda en este navegador
+      <footer className="relative z-10 text-center text-white/80 text-sm pb-6 space-y-3">
+        <div>
+          <p className="mb-2 text-white/90">¿Te gusta el juego? Puedes apoyarme para seguir creando más 💖</p>
+          <BotonKofi />
+        </div>
+        <p>
+          Hecho por <a className="underline hover:text-white" href="https://github.com/paniwis">Evelyn Larraga</a> · Tu progreso se guarda en este navegador
+        </p>
       </footer>
 
       <Toasts toasts={s.toasts} dispatch={dispatch} />
